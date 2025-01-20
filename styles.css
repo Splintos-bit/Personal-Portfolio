@@ -1,0 +1,145 @@
+/* Base Styles (Mobile-First) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 10px;
+    border: 4px solid #000; /* Default border for all sections */
+}
+
+.header {
+    display: flex;
+    flex-direction: column; /* Stack header items vertically */
+    align-items: center;
+    border-top: 4px solid;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+    border-left: 4px solid;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-name {
+    flex: 1;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.name {
+    font-size: 1.5em;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.menu span {
+    margin: 0 10px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column; /* Stack the sections vertically */
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+    border-left: 4px solid;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.left, .center, .right {
+    margin-bottom: 20px;
+    border: 4px solid #000;
+
+}
+
+.left div, .center div, .right div {
+    padding: 10px;
+    border: 4px solid #000;
+}
+
+/* Footer Styles - Stack footer items vertically */
+.footer {
+    display: flex;
+    flex-direction: column; /* Stack items in the footer vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 4px solid #000;
+}
+
+.footer .review {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer .rounded-box {
+    display: flex;
+    flex-direction: column; /* Stack review boxes vertically */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer .copyright {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Responsive Layout - When screen width is larger than 768px (Tablet & larger screens) */
+@media (min-width: 767px) {
+    .header {
+        flex-direction: row; /* Align header items horizontally */
+        justify-content: space-between;
+    }
+
+    .body {
+        flex-direction: row; /* Arrange left, center, and right sections in a row */
+        justify-content: space-between;
+        gap: 20px; /* Add space between sections */
+    }
+
+    .left, .center, .right {
+        flex: 1; /* Allow sections to take equal space */
+        margin-bottom: 0;
+    }
+
+    .footer {
+        flex-direction: row; /* Align footer items horizontally */
+        justify-content: space-between;
+        gap: 20px; /* Space between review boxes */
+    }
+
+    .footer .rounded-box {
+        flex-direction: row; /* Align the review boxes horizontally */
+        gap: 20px;
+    }
+}
+
+/* Responsive Layout - For larger devices (e.g., desktops) */
+@media (min-width: 1024px) {
+    .header .image-name {
+        margin: 0 20px;
+    }
+
+    .footer .rounded-box {
+        gap: 40px; /* More space between review boxes */
+    }
+
+    .footer .copyright {
+        font-size: 16px;
+    }
+
+    /* Borders for desktop version */
+    .body, .header, .footer {
+        border: 4px solid #000;
+    }
+
+    .footer .rounded-box div {
+        border: 4px solid #000; /* Adding borders to individual review boxes in desktop */
+    }
+}
